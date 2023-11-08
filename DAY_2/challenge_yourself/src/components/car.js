@@ -1,6 +1,4 @@
-import './App.css';
 import React from 'react';
-
 class Car extends React.Component
 {
     render() {
@@ -15,24 +13,4 @@ class Car extends React.Component
         )
     }
 }
-
-function Location()
-{
-    return (
-      <>
-        <h1>CompanyName: SKCET</h1>
-        <h1>CityName: Coimbatore</h1>
-      </>
-    )
-}
-
-function App() {
-  return (
-    <>
-      <Car />
-      <Location />
-    </>
-  );
-}
-
-export default App;
+export default Car;
