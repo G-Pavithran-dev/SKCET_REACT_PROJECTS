@@ -13,7 +13,7 @@ function App() {
     <div>
       <h1>Transformation App</h1>
       <p>
-        Current Transformation: <strong>{transformation}</strong>
+        Current Transformation: {transformation}
       </p>
       <button onClick={toggleTransformation}>Toggle Transformation</button>
     </div>
