@@ -1,12 +1,23 @@
-import './App.css';
-import Counter from './components/counter';
+import React, { useState } from 'react'
 
 function App() {
-  return(
-    <>
-      <Counter />
-    </>
+  const [transformation, setTransformation] = useState('Kaioken')
+
+  const toggleTransformation = () => {
+    setTransformation((prev) =>
+      prev === 'Kaioken' ? 'SuperSaiyan' : 'Kaioken'
+    )
+  }
+
+  return (
+    <div>
+      <h1>Transformation App</h1>
+      <p>
+        Current Transformation: <strong>{transformation}</strong>
+      </p>
+      <button onClick={toggleTransformation}>Toggle Transformation</button>
+    </div>
   )
 }
 
-export default App;
+export default App
