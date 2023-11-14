@@ -1,22 +1,8 @@
-import React, { useState } from 'react'
+import Transformation from './components/transFormatoin'
 
 function App() {
-  const [transformation, setTransformation] = useState('Kaioken')
-
-  const toggleTransformation = () => {
-    setTransformation((prev) =>
-      prev === 'Kaioken' ? 'SuperSaiyan' : 'Kaioken'
-    )
-  }
-
   return (
-    <div>
-      <h1>Transformation App</h1>
-      <p>
-        Current Transformation: {transformation}
-      </p>
-      <button onClick={toggleTransformation}>Toggle Transformation</button>
-    </div>
+    <Transformation />
   )
 }
 
