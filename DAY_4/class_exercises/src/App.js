@@ -1,10 +1,10 @@
-import './App.css';
-import Counter from './components/counter';
+import AutoComplete from "./components/autoComplete";
+
 
 function App() {
   return(
     <>
-      <Counter />
+      <AutoComplete />
     </>
   )
 }
