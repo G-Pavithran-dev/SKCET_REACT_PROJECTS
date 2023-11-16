@@ -1,4 +1,4 @@
-import AutoComplete from "./components/favFruits";
+import AutoComplete from "./components/autoComplete";
 
 
 function App() {
