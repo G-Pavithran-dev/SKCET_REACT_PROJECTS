@@ -1,10 +1,10 @@
 import './App.css';
-import List from './components/listDemo';
+import  ParentContext  from './components/contextDemo';
 
 function App() {
   return (
     <>
-      <List />
+      <ParentContext />
     </>
   );
 }

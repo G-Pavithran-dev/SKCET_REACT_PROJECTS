@@ -39,12 +39,12 @@ export default function AutoComplete()
           >
             Submit
           </Button>
+        </form>
           {form.name && (
             <Typography variant='h4' style={{marginTop:'30px'}}>
               Hello, {form.name}! Your favorite fruit is {form.fruit}.
             </Typography>
           )}
-        </form>
       </>
     )
 }
