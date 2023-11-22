@@ -3,52 +3,27 @@
         {
             "id" : 1,
             "name" : "Tomato",
+            "description" : "....",
+            "stock" : 30,
             "price" : 10
-        },
+        } 
+    ],
+    "Fruits" : [
         {
-            "id" : 2,
-            "name" : "Potato",
-            "price" : 20
-        },
+          "id": 1,
+          "name": "Mango",
+          "description": "....",
+          "stock": 30,
+          "price": 40
+        }
+    ],
+    "Dairy" : [
         {
-            "id" : 3,
-            "name" : "Onion",
-            "price" : 25
-        },
-        {
-            "id" : 4,
-            "name" : "CaliFlower",
-            "price" : 15
-        },
-        {
-            "id" : 5,
-            "name" : "LadiesFinger",
-            "price" : 60
-        },
-        {
-            "id" : 6,
-            "name" : "Brinjal",
-            "price" : 40
-        },
-        {
-            "id" : 7,
-            "name" : "beans",
-            "price" : 35
-        },
-        {
-            "id" : 8,
-            "name" : "carrot",
-            "price" : 45
-        },
-        {
-            "id" : 9,
-            "name" : "Brocoli",
-            "price" : 75
-        },
-        {
-            "id" : 10,
-            "name" : "Pumpkin",
-            "price" : 50
+          "id": 1,
+          "name": "Chesse",
+          "description": "....",
+          "stock": 30,
+          "price": 50
         }
     ]
 }

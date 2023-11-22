@@ -6,15 +6,16 @@ export default function JsonServerDemo()
     const [data,setData] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/vegetables')
-            .then((Response) => {
-                setData(Response.data);
-            })
-            .catch((error) => {
-                console.error(error.message);
-            })
+        axios
+          .get('http://localhost:3001/veggies')
+          .then((Response) => {
+            setData(Response.data)
+          })
+          .catch((error) => {
+            console.error(error.message)
+          })
     },[])
-
+  
     return (
         <div>
             <h1>VEGETABLES DATA FROM SERVER</h1>
