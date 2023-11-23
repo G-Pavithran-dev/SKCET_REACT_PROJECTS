@@ -23,6 +23,11 @@
         {
             "id":5,
             "title": "Title 5",
+            "author": "Author 5"
+        },
+        {
+            "id":6,
+            "title": "Title 6",
             "author": "Author 6"
         }
     ],
