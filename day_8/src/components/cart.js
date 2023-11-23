@@ -8,6 +8,7 @@ import {
   Card,
   CardContent,
   IconButton,
+  Badge
 } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
@@ -15,6 +16,7 @@ import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart'
 
 const Cart = ({ items, addItem, removeItem }) => {
   const [newItem, setNewItem] = useState('')
+  const [count, setCount] = useState(0);
 
   const handleInputChange = (event) => {
     setNewItem(event.target.value)
@@ -23,17 +25,21 @@ const Cart = ({ items, addItem, removeItem }) => {
   const handleAddItem = () => {
     addItem(newItem)
     setNewItem('')
+    setCount(count+1);
   }
 
   const handleRemove = (index) => {
     removeItem(index)
+    setCount(count-1)
   }
 
   return (
     <div>
       <Typography variant="h4">
-        <ShoppingCartIcon />
-        Cart
+        Cart{'  '}
+        <Badge badgeContent={count} color="success" sx={{}}>
+          <ShoppingCartIcon />
+        </Badge>
       </Typography>
       <TextField
         type="text"
