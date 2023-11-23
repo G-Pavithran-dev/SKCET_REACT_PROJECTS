@@ -1,12 +1,14 @@
-import './App.css';
-import UseEffectDemo from './components/class_exercise';
+import './App.css'
+import { Provider } from 'react-redux'
+import store from './components/redux'
+import Cart from './components/cart'
 
 function App() {
   return (
-    <>
-      <UseEffectDemo />
-    </>
-  );
+    <Provider store={store}>
+      <Cart />
+    </Provider>
+  )
 }
 
-export default App;
+export default App
