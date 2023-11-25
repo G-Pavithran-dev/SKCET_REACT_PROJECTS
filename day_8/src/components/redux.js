@@ -18,7 +18,7 @@ const listReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_ITEM':
       return { items: [...state.items, action.payload] }
-      case 'REMOVE_ITEM':
+    case 'REMOVE_ITEM':
       const newItems = [...state.items];
       newItems.splice(action.payload,1);
       return {

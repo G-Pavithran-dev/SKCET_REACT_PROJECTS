@@ -1,50 +1,67 @@
-import {Autocomplete, Button, TextField, Typography} from '@mui/material';
-import { useState } from 'react';
+import React, { useState } from 'react'
+import {
+  Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  TextField,
+} from '@mui/material'
 
-export default function AutoComplete()
-{
-    const option = ['Apple','Banana','Cherry','Durian','Elderberry'];
-    const [form,setForm] = useState({name:null,fruit:null});
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const name = event.target[0].value;
-        const fruit = event.target[1].value;
-        setForm({name,fruit});
-    }
-    return (
-      <>
-        <Typography variant="h2">Enter your name favourite fruit:</Typography>
-        <form onSubmit={handleSubmit}>
+const LoginButton = () => {
+  const [open, setOpen] = useState(false)
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleLogin = () => {
+    console.log('Username:', username)
+    console.log('Password:', password)
+
+    setOpen(false)
+  }
+
+  return (
+    <div>
+      <Button
+        variant="contained"
+        onClick={() => setOpen(true)}
+        data-testid="login"
+      >
+        Login
+      </Button>
+
+      <Dialog open={open} onClose={() => setOpen(false)}>
+        <DialogTitle>Login</DialogTitle>
+        <DialogContent>
           <TextField
-            data-testid="name"
-            id="IdName"
-            variant="standard"
-            label="Name"
+            label="Username"
+            variant="outlined"
+            fullWidth
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            data-testid="username"
           />
-          <Autocomplete
-            style={{ marginTop: '50px' }}
-            data-testid="autocomplete"
-            disablePortal
-            options={option}
-            sx={{ width: 300 }}
-            renderInput={(params) => (
-              <TextField {...params} label="Choose a fruit" />
-            )}
+          <TextField
+            label="Password"
+            type="password"
+            variant="outlined"
+            fullWidth
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            data-testid="password"
           />
-          <Button
-            style={{ marginTop: '50px' }}
-            variant="contained"
-            color="primary"
-            type="submit"
-          >
-            Submit
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setOpen(false)} data-testid="cancel">
+            Cancel
           </Button>
-          {form.name && (
-            <Typography variant='h4' style={{marginTop:'30px'}}>
-              Hello, {form.name}! Your favorite fruit is {form.fruit}.
-            </Typography>
-          )}
-        </form>
-      </>
-    )
+          <Button onClick={handleLogin} data-testid="dia-login">
+            Login
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  )
 }
+
+export default LoginButton
